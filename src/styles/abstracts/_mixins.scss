@@ -1,0 +1,51 @@
+@mixin smartphone {
+    @media (min-width: #{$breakpoint-smartphone }) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (min-width: #{$breakpoint-tablet}) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+      @content;
+    }
+  }
+  
+  @mixin x-desktop {
+    @media (min-width: #{$breakpoint-x-large}) {
+      @content;
+    }
+  }
+  
+  @mixin xx-desktop {
+    @media (min-width: #{$breakpoint-xx-large}) {
+      @content;
+    }
+  }
+  
+  @mixin lx-desktop {
+    @media (min-width: #{$breakpoint-lx-large}) {
+      @content;
+    }
+  }
+  
+//   @mixin fface($family, $file: '', $weight: 400, $svg: '', $style: normal) {
+//     @font-face {
+//       font-family: $family;
+//       src: url('/assets/fonts/#{$file}.ttf') format('truetype');
+//       font-weight: $weight;
+//       font-style: $style;
+//     }
+//   }
+  
+//   @mixin fonte($size: 16px, $weight: 400) {
+//     font-family: 'Heebo';
+//     font-size: $size;
+//     font-weight: $weight;
+//   }
+  

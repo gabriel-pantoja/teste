@@ -1,0 +1,89 @@
+@use '@angular/material' as mat;
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@include mat.core();
+
+
+/**
+* Material Colors Pallets
+*/
+
+$pdf-purple-base: (
+  50: #11324D,
+  100: #11324D,
+  200: #11324D,
+  300: #11324D,
+  400: #11324D,
+  500: #11324D,
+  600: #11324D,
+  700: #11324D,
+  800: #11324D,
+  900: #11324D,
+  A100: #11324D,
+  A200: #11324D,
+  A400: #11324D,
+  A700: #11324D,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$pdf-purple-light: (
+  50: #6750A4,
+  100: #6750A4,
+  200: #6750A4,
+  300: #6750A4,
+  400: #6750A4,
+  500: #6750A4,
+  600: #6750A4,
+  700: #6750A4,
+  800: #6750A4,
+  900: #6750A4,
+  A100: #6750A4,
+  A200: #6750A4,
+  A400: #6750A4,
+  A700: #6750A4,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: rgba(black, 0.87),
+  )
+);
+
+$truth-news-front-primary: mat.define-palette($pdf-purple-base);
+$truth-news-front-accent: mat.define-palette($pdf-purple-light);
+$truth-news-front-warn: mat.define-palette(mat.$red-palette);
+
+$truth-news-front-theme: mat.define-light-theme((
+  color: (
+    primary: $truth-news-front-primary,
+    accent: $truth-news-front-accent,
+    warn: $truth-news-front-warn,
+  )
+));
+
+@include mat.all-component-themes($truth-news-front-theme);
